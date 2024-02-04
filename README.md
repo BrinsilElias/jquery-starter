@@ -4,19 +4,13 @@ This guide outlines the steps to set up your local workspace for projects.
 
 ## GitHub Branch Setup
 
-### Initial Setup: Creating a Release Branch for Projects
-
-1. Create a release branch using the following details:
-   - Type: release
-   - Base branch: master
-   - Branch name: `release/<project-name>`
-     - Example: `release/PICO`
+This project uses Github Branching Strategy, it simplifies Git-Flow by eliminating release branches. It revolves around one active development branch (often main or master) that is directly deployed to production. Features and bug fixes are implemented using long-living feature branches. Feedback loops and asynchronous collaboration, common in open-source projects, are encouraged.
 
 ### Working with Projects
 
 1. Create a feature branch from your respective main branch:
    - Type: feature
-   - From branch: `release/project-name`
+   - From branch: `main`
    - Branch name: `feature/<project-name>/<short-feature-description>`
      - Example: `feature/PICO/social-media-integration`
 
@@ -29,8 +23,8 @@ This guide outlines the steps to set up your local workspace for projects.
 3. Stage your changes by using `git add .` for all changes or `git add <file>` for specific files.
 4. Before committing, review your changes by using `git diff --staged`. This will show you what you're about to commit.
 5. Regularly push your changes to the remote repository with `git push`. This ensures that your work is backed up and available to others.
-6. When your feature is complete, create a pull request for your changes to be reviewed and merged into the release branch.
-7. Respond to any feedback on your pull request and make changes as necessary. Once your pull request is approved, it can be merged into the release branch.
+6. When your feature is complete, create a pull request for your changes to be reviewed and merged into the main branch.
+7. Respond to any feedback on your pull request and make changes as necessary. Once your pull request is approved, it can be merged into the main branch.
 
 ## Important Things to Remember
 
@@ -38,4 +32,4 @@ This guide outlines the steps to set up your local workspace for projects.
   `<Project Name>: <Brief Summary of the Work>`
   - Example: `PICO: Implemented responsive design for project`
 
-- Create a pull request from your feature branch to your respective release branch.
+- Create a pull request from your feature branch to the main branch.
