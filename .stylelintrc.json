@@ -1,0 +1,18 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "indentation": 4,
+        "string-quotes": "single",
+        "import-notation": "string",
+        "scss/at-import-no-partial-leading-underscore": true,
+        "scss/at-import-partial-extension-blacklist": ["scss"],
+        "scss/dollar-variable-no-missing-interpolation": true,
+        "scss/media-feature-value-dollar-variable": "always",
+        "scss/selector-no-redundant-nesting-selector": true,
+        "at-rule-empty-line-before": [ "always", { "ignoreAtRules": ["else"], "ignore": ["blockless-after-same-name-blockless", "inside-block", "after-comment"] } ],
+        "block-closing-brace-newline-after": [ "always", { "ignoreAtRules": ["if", "else"] } ]
+    }    
+}
