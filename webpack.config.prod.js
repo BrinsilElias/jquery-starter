@@ -34,11 +34,11 @@ module.exports = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
+                test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: "[name].[ext]",
+                        name: "[folder]/[name].[ext]",
                         outputPath: "static"
                     }
                 }
