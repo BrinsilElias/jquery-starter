@@ -14,8 +14,8 @@ module.exports = {
         path: path.resolve(__dirname, "public")
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/app/templates/template.html'), minify: false, }),
-        new MiniCssExtractPlugin({ filename: "[name].css" }),
+        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/app/templates/template.html'), minify: false }),
+        new MiniCssExtractPlugin({ filename: "[name].css" })
     ],
     module: {
         rules: [
@@ -25,7 +25,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+                use: [MiniCssExtractPlugin.loader,
+                    { loader: "css-loader", options: { sourceMap: true } },
+                    "postcss-loader",
+                    "sass-loader"
+                ],
             },
             {
                 test: /\.html$/,
@@ -46,6 +50,6 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
-        compress: true,
+        compress: true
     },
 }
