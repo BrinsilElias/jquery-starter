@@ -27,7 +27,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader,
                     { loader: "css-loader", options: { sourceMap: true } },
-                    "postcss-loader",
+                    { loader: "postcss-loader", options: { sourceMap: true } },
                     "sass-loader"
                 ],
             },
