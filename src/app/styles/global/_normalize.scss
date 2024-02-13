@@ -13,12 +13,55 @@
     background-repeat: no-repeat;
 }
 
+:where(html) {
+    block-size: 100%;
+    font-family: $font-sans;
+    line-height: $font-lineheight-3;
+
+    @include reduce-motion ($motionOK) {
+        scroll-behavior: smooth;
+    }
+}
+
+@include reduce-motion ($motionOK) {
+    :where(:focus-visible) {
+        transition: outline-offset 145ms $ease-2;
+    }
+
+    :where(:not(:active):focus-visible) {
+        transition-duration: 0.25s;
+    }
+}
+
 :where(:not(:active):focus-visible) {
     outline-offset: 5px;
 }
 
 :where(body) {
     min-block-size: 100%;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+    line-height: $font-lineheight-1;
+    font-weight: $font-weight-9;
+    text-wrap: balance;
+}
+
+:where(h1) {
+    font-size: $font-size-8;
+    max-inline-size: $size-header-1;
+}
+
+:where(h3, h4, h5, h6, dt) {
+    max-inline-size: $size-header-3;
+}
+
+:where(p, ul, ol, dl, h6) {
+    font-size: $font-size-2;
+}
+
+:where(a, u, ins, abbr) {
+    text-underline-offset: 1px;
 }
 
 :where(a[href], area, button,
@@ -31,9 +74,23 @@ summary,
     cursor: pointer;
 }
 
-:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*='-'])) {
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
+:where(a) {
+    padding-inline: $size-1;
+    margin-inline: calc($size-1 * -1);
+    padding-block: $size-1;
+    margin-block: calc($size-1 * -1);
+
+    &:where([href]) {
+        text-decoration-color: $indigo-2;
+
+        &:where(:visited) {
+            text-decoration-color: $purple-2;
+        }
+    }
+
+    &:where(:not(:hover)) {
+        text-decoration: inherit;
+    }
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
@@ -51,6 +108,21 @@ summary,
     font-size: inherit;
     color: inherit;
     letter-spacing: inherit;
+}
+
+::placeholder {
+    color: $gray-7;
+    opacity: 0.75;
+}
+
+:where(input:not([type='range']), textarea) {
+    padding-inline: $size-2;
+    padding-block: $size-1;
+}
+
+:where(select) {
+    padding-inline: $size-relative-4 0;
+    padding-block: 0.75ch;
 }
 
 :where(textarea) { resize: block; }

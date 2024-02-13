@@ -7,6 +7,7 @@
         "indentation": 4,
         "string-quotes": "single",
         "import-notation": "string",
+        "at-rule-no-unknown": [true, {"ignoreAtRules": ["mixin", "if", "else", "include"]}],
         "scss/at-import-no-partial-leading-underscore": true,
         "scss/at-import-partial-extension-blacklist": ["scss"],
         "scss/dollar-variable-no-missing-interpolation": true,
