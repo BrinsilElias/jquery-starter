@@ -1,5 +1,12 @@
-@import './app/styles/global/fonts.variables';
-@import './app/styles/global/colors.variables';
-@import './app/styles/global/sizes.variables';
-@import './app/styles/global/borders.variables';
+@import './app/styles/variables/fonts.variables';
+@import './app/styles/variables/colors.variables';
+@import './app/styles/variables/sizes.variables';
+@import './app/styles/variables/borders.variables';
+@import './app/styles/variables/easing.variables';
+@import './app/styles/variables/variables';
+
+@import './app/styles/mixins/media.preference';
+
 @import './app/styles/global/normalize';
+@import './app/styles/global/theme.light';
+@import './app/styles/global/theme.dark';
