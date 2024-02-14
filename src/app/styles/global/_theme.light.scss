@@ -1,16 +1,19 @@
-:where(html) {
-    color-scheme: light;
+@include color-scheme($OSlight) {
+    :where(html) {
+        color-scheme: light;
 
-    $link: var($indigo-7);
-    $link-visited: var($purple-7);
+        --link: #{$indigo-7};
+        --link-visited: #{$purple-7};
+        --text-1: #{$gray-12};
+        --text-2: #{$gray-7};
+        --surface-1: #{$gray-0};
+        --surface-2: #{$gray-2};
+        --surface-3: #{$gray-3};
+        --surface-4: #{$gray-4};
+        --scrollthumb-color: #{$gray-7};
 
-    $text-1: var($gray-12);
-    $text-2: var($gray-7);
-
-    $surface-1: var($gray-0);
-    $surface-2: var($gray-2);
-    $surface-3: var($gray-3);
-    $surface-4: var($gray-4);
-
-    $scrollthumb-color: var($gray-7);
+        :where(dialog) {
+            background-color: var(--surface-1);
+        }
+    }
 }
