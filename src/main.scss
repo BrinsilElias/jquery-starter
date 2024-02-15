@@ -1,3 +1,4 @@
+/* --- Variables --- */
 @import './app/styles/variables/fonts.variables';
 @import './app/styles/variables/colors.variables';
 @import './app/styles/variables/sizes.variables';
@@ -5,8 +6,13 @@
 @import './app/styles/variables/easing.variables';
 @import './app/styles/variables/variables';
 
+/* --- Mixins --- */
 @import './app/styles/mixins/media.preference';
 
+/* --- Utilities --- */
+
+/* --- Global Styles --- */
 @import './app/styles/global/normalize';
 @import './app/styles/global/theme.light';
 @import './app/styles/global/theme.dark';
+@import './app/styles/global/theme';
