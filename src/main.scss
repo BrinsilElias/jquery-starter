@@ -9,10 +9,14 @@
 /* --- Mixins --- */
 @import './app/styles/mixins/media.preference';
 
-/* --- Utilities --- */
-
 /* --- Global Styles --- */
-@import './app/styles/global/normalize';
 @import './app/styles/global/theme.light';
 @import './app/styles/global/theme.dark';
 @import './app/styles/global/theme';
+@import './app/styles/global/normalize';
+
+/* --- Utilities --- */
+@import './app/styles/utilities/flow';
+@import './app/styles/utilities/region';
+@import './app/styles/utilities/wrapper';
+@import './app/styles/utilities/visually-hidden';
