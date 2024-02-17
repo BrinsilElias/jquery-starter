@@ -6,3 +6,5 @@ $radius-1: 2px;
 $radius-2: 5px;
 $radius-3: 1rem;
 $radius-round: 1e5px;
+
+$nice-inner-radius: calc($radius-3 - 2px);
