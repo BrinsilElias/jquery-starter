@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Satoshi;
+    src:
+        url('assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Regular.woff') format('woff'),
+        url('assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Satoshi;
+    src:
+        url('assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Medium.woff') format('woff'),
+        url('assets/fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Satoshi;
+    src:
+        url('assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('assets/fonts/Satoshi-Bold.woff') format('woff'),
+        url('assets/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
