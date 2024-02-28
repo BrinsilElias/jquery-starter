@@ -2,4 +2,32 @@
 
 body {
     font-family: Satoshi, $font-sans;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+main {
+    width: min(500px, 100% - 1.5rem);
+    margin-inline: auto;
+
+    .emoji,
+    img {
+        height: calc(var(--scale) * 1.2rem);
+        margin-inline: auto;
+    }
+
+    .icon-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: fit-content;
+        place-items: center;
+        margin-inline: auto;
+        margin-block: 1rem;
+        gap: 1.6rem;
+    }
+
+    .text-container {
+        text-align: center;
+    }
 }
