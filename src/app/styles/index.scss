@@ -13,7 +13,7 @@ main {
 
     .emoji,
     img {
-        height: calc(var(--scale) * 1.2rem);
+        height: calc(var(--_scale) * 1.2rem);
         margin-inline: auto;
     }
 
@@ -29,5 +29,10 @@ main {
 
     .text-container {
         text-align: center;
+        margin-block: 2rem;
+
+        img.emoji {
+            margin-bottom: 1rem;
+        }
     }
 }

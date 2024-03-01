@@ -2,6 +2,6 @@
 Flow Utility
 provides flow and rhythm between direct sibling elements
 */
-.flow > * + * {
+.flow * + * {
     margin-top: var(--flow-space, 1em);
 }
