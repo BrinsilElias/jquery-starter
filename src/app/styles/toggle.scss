@@ -1,0 +1,51 @@
+$ease-elastic-1: $ease-elastic-out-1;
+$ease-elastic-2: $ease-elastic-out-2;
+$ease-elastic-3: $ease-elastic-out-3;
+
+[data-theme='dark'] .sun-and-moon > .sun {
+    transform: scale(1.75);
+}
+
+[data-theme='dark'] .sun-and-moon > .sun-beams {
+    opacity: 0;
+}
+
+[data-theme='dark'] .sun-and-moon > .moon > circle {
+    transform: translateX(-7px);
+}
+
+@include reduce-motion ($motionOK) {
+    .sun-and-moon > .sun {
+        transition: transform 0.5s var($ease-elastic-3);
+    }
+
+    .sun-and-moon > .sun-beams {
+        transition: transform 0.5s cubic-bezier(0.5, -0.7, 0.1, 1.5), opacity 0.5s $ease-3;
+    }
+
+    .sun-and-moon .moon > circle {
+        transition: transform 0.25s cubic-bezier(0.9, 0, 0.1, 1);
+    }
+
+    @supports (cx: 1) {
+        .sun-and-moon .moon > circle {
+            transition: cx 0.25s cubic-bezier(0.9, 0, 0.1, 1);
+        }
+    }
+
+    [data-theme='dark'] .sun-and-moon > .sun {
+        transition-timing-function: $ease-3;
+        transition-duration: 0.25s;
+        transform: scale(1.75);
+    }
+
+    [data-theme='dark'] .sun-and-moon > .sun-beams {
+        transition-duration: 0.15s;
+        transform: rotateZ(-25deg);
+    }
+
+    [data-theme='dark'] .sun-and-moon > .moon > circle {
+        transition-duration: 0.5s;
+        transition-delay: 0.25s;
+    }
+}

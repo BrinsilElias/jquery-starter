@@ -38,7 +38,7 @@ nav {
     display: flex;
     grid-row: row-1-start / row-1-end;
     grid-column: col-2-start / col-2-end;
-    justify-content: end;
+    justify-content: flex-end;
 
     button {
         margin-top: 1.5rem;
