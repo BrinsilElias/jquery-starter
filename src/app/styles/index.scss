@@ -22,6 +22,23 @@
     }
 }
 
+:where([data-theme='light'], .light, .light-theme) {
+    --surface-1: #{$app-clr-background-light};
+    --app-clr-tr-border: #{$app-clr-tr-border-light};
+    --app-clr-tr-header: #{$app-clr-tr-header-light};
+    --app-clr-tr-threedots: #{$app-clr-tr-threedots-light};
+    --app-clr-tr-background: #{$app-clr-tr-background-light};
+}
+
+:where([data-theme='dark'], .dark, .dark-theme) {
+    --surface-1: #{$app-clr-background-dark};
+    --app-clr-tr-text: #{$app-clr-tr-text-dark};
+    --app-clr-tr-border: #{$app-clr-tr-border-dark};
+    --app-clr-tr-header: #{$app-clr-tr-header-dark};
+    --app-clr-tr-threedots: #{$app-clr-tr-threedots-dark};
+    --app-clr-tr-background: #{$app-clr-tr-background-dark};
+}
+
 body {
     font-family: Satoshi, $font-sans;
     display: grid;

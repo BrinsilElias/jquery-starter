@@ -12,9 +12,7 @@ const theme = {
 };
 
 const reflectPreference = () => {
-    document.firstElementChild
-        .setAttribute('data-theme', theme.value);
-
+    $(':first-child').attr('data-theme', theme.value);
     $('#theme-toggle').attr('aria-label', theme.value);
 };
 
@@ -23,28 +21,27 @@ const setPreference = () => {
     reflectPreference();
 };
 
-const onClick = () => {
-    // flip current value
-    theme.value = theme.value === 'light' ? 'dark' : 'light';
+const handleColorSchemeChange = () => {
+    window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', ({ matches: isDark }) => {
+            theme.value = isDark ? 'dark' : 'light';
+            setPreference();
+        });
+};
 
+const onClick = () => {
+    theme.value = theme.value === 'light' ? 'dark' : 'light';
     setPreference();
 };
 
-// set early so no page flashes / CSS is made aware
-reflectPreference();
-
-window.onload = () => {
-    // set on load so screen readers can see latest value on the button
+const initThemeToggle = () => {
     reflectPreference();
-
-    // now this script can find and listen for clicks on the control
     $('#theme-toggle').on('click', onClick);
 };
 
-// sync with system changes
-window
-    .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', ({ matches: isDark }) => {
-        theme.value = isDark ? 'dark' : 'light';
-        setPreference();
-    });
+module.exports = {
+    handleColorSchemeChange,
+    reflectPreference,
+    initThemeToggle,
+};

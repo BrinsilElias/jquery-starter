@@ -1,0 +1,21 @@
+:where([data-theme='light'], .light, .light-theme) {
+    color-scheme: light;
+
+    --link: #{$indigo-7};
+    --link-visited: #{$purple-7};
+    --text-1: #{$gray-12};
+    --text-2: #{$gray-7};
+    --surface-1: #{$gray-0};
+    --surface-2: #{$gray-2};
+    --surface-3: #{$gray-3};
+    --surface-4: #{$gray-4};
+    --scrollthumb-color: #{$gray-7};
+
+    :where(dialog) {
+        background-color: var(--surface-1);
+    }
+}
+
+:where(textarea, select, input:not([type='button'],[type='submit'],[type='reset'])) {
+    background-color: var(--surface-2);
+}
