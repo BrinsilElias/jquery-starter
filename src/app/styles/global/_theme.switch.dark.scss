@@ -1,0 +1,21 @@
+:where([data-theme='dark'], .dark, .dark-theme) {
+    color-scheme: dark;
+
+    --link: #{$indigo-3};
+    --link-visited: #{$purple-3};
+    --text-1: #{$gray-0};
+    --text-2: #{$gray-4};
+    --surface-1: #{$gray-9};
+    --surface-2: #{$gray-8};
+    --surface-3: #{$gray-7};
+    --surface-4: #{$gray-6};
+    --scrollthumb-color: #{$gray-6};
+
+    :where(dialog) {
+        background-color: var(--surface-2);
+    }
+}
+
+:where(textarea, select, input:not([type='button'],[type='submit'],[type='reset'])) {
+    background-color: hsl(210deg 11% 10%);
+}

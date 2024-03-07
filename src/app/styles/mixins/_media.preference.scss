@@ -1,4 +1,4 @@
-@mixin color-scheme($mode: light, $root: false) {
+@mixin color-scheme($mode: light, $theme-switch: false, $root: false) {
     @if $color-mode-type == 'media-query' {
         @if $root == true {
             @media (prefers-color-scheme: $mode) {
@@ -11,10 +11,9 @@
                 @content;
             }
         }
-    } @else {
-        [data-bs-theme="#{$mode}"] {
-            @content;
-        }
+    }
+    @if $theme-switch == true {
+        @content;
     }
 }
 
