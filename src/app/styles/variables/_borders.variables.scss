@@ -1,10 +1,13 @@
+// Border Size
 $border-size-1: 1px;
 $border-size-2: 2px;
 $border-size-3: 5px;
 
+// Border Radius
 $radius-1: 2px;
 $radius-2: 5px;
 $radius-3: 1rem;
 $radius-round: 1e5px;
 
+// Border Inner Radius
 $nice-inner-radius: calc($radius-3 - 2px);

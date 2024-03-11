@@ -1,13 +1,42 @@
+// Dark theme colors
 $app-clr-tr-text-dark: #c1c3c8;
 $app-clr-tr-border-dark: #373a47;
 $app-clr-tr-header-dark: #0f1012;
 $app-clr-background-dark: #18191d;
 $app-clr-tr-background-dark: #20232b;
+$app-clr-btn-background-dark: #20232b;
+$app-clr-btn-border-dark: #353845;
 $app-clr-tr-threedots-dark: #c1c3c892;
 
+// Light theme colors
 $app-clr-tr-text-light: #c1c3c8;
 $app-clr-tr-header-light: #eaeef7c3;
 $app-clr-tr-border-light: #dadbe2;
 $app-clr-background-light: #f2f4f5;
 $app-clr-tr-background-light: #f2f4f9;
+$app-clr-btn-background-light: #e9eaed;
+$app-clr-btn-border-light: #dadbe2;
 $app-clr-tr-threedots-light: #c1c3c892;
+
+// Light theme definitions
+$light-theme: (
+    surface-1: $app-clr-background-light,
+    app-clr-tr-border: $app-clr-tr-border-light,
+    app-clr-tr-header: $app-clr-tr-header-light,
+    app-clr-tr-threedots: $app-clr-tr-threedots-light,
+    app-clr-tr-background: $app-clr-tr-background-light,
+    app-clr-btn-background: $app-clr-btn-background-light,
+    app-clr-btn-border: $app-clr-btn-border-light,
+);
+
+// Dark theme definitions
+$dark-theme: (
+    surface-1: $app-clr-background-dark,
+    app-clr-tr-text: $app-clr-tr-text-dark,
+    app-clr-tr-border: $app-clr-tr-border-dark,
+    app-clr-tr-header: $app-clr-tr-header-dark,
+    app-clr-tr-threedots: $app-clr-tr-threedots-dark,
+    app-clr-tr-background: $app-clr-tr-background-dark,
+    app-clr-btn-background: $app-clr-btn-background-dark,
+    app-clr-btn-border: $app-clr-btn-border-dark,
+)

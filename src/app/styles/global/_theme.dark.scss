@@ -1,4 +1,4 @@
-@include color-scheme($OSdark) {
+@include color-scheme($os-dark) {
     :where(html) {
         color-scheme: dark;
 

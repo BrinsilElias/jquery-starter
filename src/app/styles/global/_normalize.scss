@@ -18,12 +18,12 @@
     font-family: $font-sans;
     line-height: $font-lineheight-3;
 
-    @include reduce-motion ($motionOK) {
+    @include reduce-motion ($motion-ok) {
         scroll-behavior: smooth;
     }
 }
 
-@include reduce-motion ($motionOK) {
+@include reduce-motion ($motion-ok) {
     :where(:focus-visible) {
         transition: outline-offset 145ms $ease-2;
     }
@@ -117,7 +117,7 @@ summary,
     color: $gray-7;
     opacity: 0.75;
 
-    @include color-scheme($OSdark) {
+    @include color-scheme($os-dark) {
         color: $gray-6;
     }
 }
@@ -340,7 +340,7 @@ summary,
 :where(tbody tr:nth-child(even):hover td) {
     background-color: $gray-10;
 
-    @include color-scheme($OSlight) {
+    @include color-scheme($os-light) {
         background-color: white;
     }
 }

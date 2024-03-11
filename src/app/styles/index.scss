@@ -1,44 +1,36 @@
 @import './fonts';
+@import './variables/colors/brand.colors';
 
 /* --- Custom Brand theme --- */
-@include color-scheme($OSlight) {
+@include color-scheme($os-light) {
     :where(html) {
-        --surface-1: #{$app-clr-background-light};
-        --app-clr-tr-border: #{$app-clr-tr-border-light};
-        --app-clr-tr-header: #{$app-clr-tr-header-light};
-        --app-clr-tr-threedots: #{$app-clr-tr-threedots-light};
-        --app-clr-tr-background: #{$app-clr-tr-background-light};
+        @each $property, $value in $light-theme {
+            --#{$property}: #{$value};
+        }
     }
 }
 
-@include color-scheme($OSdark) {
+@include color-scheme($os-dark) {
     :where(html) {
-        --surface-1: #{$app-clr-background-dark};
-        --app-clr-tr-text: #{$app-clr-tr-text-dark};
-        --app-clr-tr-border: #{$app-clr-tr-border-dark};
-        --app-clr-tr-header: #{$app-clr-tr-header-dark};
-        --app-clr-tr-threedots: #{$app-clr-tr-threedots-dark};
-        --app-clr-tr-background: #{$app-clr-tr-background-dark};
+        @each $property, $value in $dark-theme {
+            --#{$property}: #{$value};
+        }
     }
 }
 
 :where([data-theme='light'], .light, .light-theme) {
-    --surface-1: #{$app-clr-background-light};
-    --app-clr-tr-border: #{$app-clr-tr-border-light};
-    --app-clr-tr-header: #{$app-clr-tr-header-light};
-    --app-clr-tr-threedots: #{$app-clr-tr-threedots-light};
-    --app-clr-tr-background: #{$app-clr-tr-background-light};
+    @each $property, $value in $light-theme {
+        --#{$property}: #{$value};
+    }
 }
 
 :where([data-theme='dark'], .dark, .dark-theme) {
-    --surface-1: #{$app-clr-background-dark};
-    --app-clr-tr-text: #{$app-clr-tr-text-dark};
-    --app-clr-tr-border: #{$app-clr-tr-border-dark};
-    --app-clr-tr-header: #{$app-clr-tr-header-dark};
-    --app-clr-tr-threedots: #{$app-clr-tr-threedots-dark};
-    --app-clr-tr-background: #{$app-clr-tr-background-dark};
+    @each $property, $value in $dark-theme {
+        --#{$property}: #{$value};
+    }
 }
 
+/* --- Custom Styles ---- */
 body {
     font-family: Satoshi, $font-sans;
     display: grid;
@@ -62,8 +54,20 @@ nav {
         aspect-ratio: 1;
         padding: 0.3rem;
         border-radius: 0.3rem;
-        background-color: #20232b;
-        border: #353845 1px solid;
+        background-color: var(--app-clr-btn-background);
+        border: var(--app-clr-btn-border) 1px solid;
+
+        &.theme-toggle {
+            svg { display: none; }
+        }
+
+        &:where([aria-label='light']) {
+            svg.light.moon-icon { display: block; }
+        }
+
+        &:where([aria-label='dark']) {
+            svg.dark.sun-icon { display: block; }
+        }
     }
 }
 
