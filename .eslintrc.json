@@ -1,13 +1,18 @@
 {
-    "root": true,
-    "env": {
-      "jquery": true,
-      "browser": true
-    },
-    "extends": "airbnb-base",
-    "rules": {
-        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "require-jsdoc": "error",
-        "valid-jsdoc": ["error", { "preferType": { "Boolean": "boolean", "Number": "number", "object": "Object", "String": "string" }, "requireReturn": false}]
-    }
+  "root": true,
+  "env": {
+    "jquery": true,
+    "browser": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1
+      }
+    ]
+  }
 }
