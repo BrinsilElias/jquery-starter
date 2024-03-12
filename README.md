@@ -1,35 +1,144 @@
-# Project Setup Guide
+<!-- PROJECT LOGO -->
+<div align="center">
+    <a href="https://github.com/othneildrew/Best-README-Template">
+        <img src="./src/assets/images/starter-template-ico.png" alt="Logo" width="80" height="80">
+    </a>
+    <h3 align="center">Starter Template</h3>
+    <p align="center">
+        A Starter Template that let's you build awesome single page applications with jquery and sass.
+        <br />
+        <br />
+        <a href="#">View Demo</a>
+        ·
+        <a href="#">Report Bug</a>
+        ·
+        <a href="#">Request Feature</a>
+    </p>
+</div>
 
-This guide outlines the steps to set up your local workspace for projects.
+<!-- TABLE OF CONTENTS -->
+<details>
+    <summary>Table of Contents</summary>
+    <ol>
+        <li>
+            <a href="#about-the-project">About The Project</a>
+            <ul>
+                <li><a href="#built-with">Built With</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#getting-started">Getting Started</a>
+            <ul>
+                <li><a href="#prerequisites">Prerequisites</a></li>
+                <li><a href="#installation">Installation</a></li>
+            </ul>
+        </li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#acknowledgments">Acknowledgments</a></li>
+    </ol>
+</details>
 
-## GitHub Branch Setup
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-This project uses Github Branching Strategy, it simplifies Git-Flow by eliminating release branches. It revolves around one active development branch (often main or master) that is directly deployed to production. Features and bug fixes are implemented using long-living feature branches. Feedback loops and asynchronous collaboration, common in open-source projects, are encouraged.
+This template provides a powerful foundation for swiftly building slick, single-page web applications using modern development tools and technologies. Streamline your workflow and focus on core functionality and let the template handle the other stuff.
 
-### Working with Projects
+### Built With
 
-1. Create a feature branch from your respective main branch:
-   - Type: feature
-   - From branch: `main`
-   - Branch name: `feature/<project-name>/<short-feature-description>`
-     - Example: `feature/PICO/social-media-integration`
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Workspace Setup
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
-### Working with Projects
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-1. Checkout your individual feature branch created for your project.
-2. Make changes to your files. Remember to make small, logical changes that are easy to understand and review.
-3. Stage your changes by using `git add .` for all changes or `git add <file>` for specific files.
-4. Before committing, review your changes by using `git diff --staged`. This will show you what you're about to commit.
-5. Regularly push your changes to the remote repository with `git push`. This ensures that your work is backed up and available to others.
-6. When your feature is complete, create a pull request for your changes to be reviewed and merged into the main branch.
-7. Respond to any feedback on your pull request and make changes as necessary. Once your pull request is approved, it can be merged into the main branch.
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
-## Important Things to Remember
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
-- All commit messages must follow this pattern:
-  `<Project Name>: <Brief Summary of the Work>`
-  - Example: `PICO: Implemented responsive design for project`
+![Stylelint](https://img.shields.io/badge/stylelint-000?style=for-the-badge&logo=stylelint&logoColor=white)
 
-- Create a pull request from your feature branch to the main branch.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## ⛳ Getting Started
+
+### Prerequisites
+
+Node.js: Please ensure you have Node.js installed on your machine, version 18 or greater. You can download it from the official website [NodeJs](https://nodejs.org/).
+
+### Setup
+
+#### Clone starter-template into a new folder
+```sh
+mkdir new-project-name && cd $_
+```
+```sh
+git clone --depth=1 https://github.com/BrinsilElias/starter-template.git && rm -rf ./.git
+```
+OR (essentially the same thing with npx + degit)
+
+```sh
+npx degit BrinsilElias/starter-template#main
+```
+
+#### Install tools and spin it up
+1. `npm i` or `npm install` - Install all dependencies
+2. `npm start` - Start the development Server
+3. `npm run build` - Build static assets
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## ⚒️ Usage
+To get the most out of this template, follow these guidelines:
+
+### Core Structure
+* `src/`: This is your primary development workspace. All modifications and additions should take place within this folder.
+* `src/app/templates/template.html`: This file is your primary HTML template. Add your structural markup and content here.
+* `src/main.scss`: Include your custom styles within this SCSS file.
+
+### Features
+* **Mixins and Utilities**: The template provides pre-built mixins and utilities for easier styling. Explore them for a headstart.
+* `styles/variables/`: Define your style variables within this folder for organized customization.
+* `styles/mixins/`: Store your custom mixins within this folder for maintainability.
+* `styles/utilities/`: Place your reusable utility classes in this folder.
+* `src/index.js`: All public JavaScript functions should be called in this file.
+
+<!-- ROADMAP -->
+## 🚧 Roadmap
+
+See the [open issues](https://github.com/BrinsilElias/starter-template/issues) for a list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **extremely appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+## 📝 License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## 📫 Contact
+
+Brinsil Elias - [@BrinsilE](https://twitter.com/BrinsilE)
+
+Project Link: [https://github.com/BrinsilElias/starter-template](https://github.com/BrinsilElias/starter-template.git)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Img Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com)
