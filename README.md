@@ -8,7 +8,7 @@
         A Starter Template that let's you build awesome single page applications with jquery and sass.
         <br />
         <br />
-        <a href="#">View Demo</a>
+        <a href="https://webpack-starter-template.netlify.app/" target="_blank">View Demo</a>
         ·
         <a href="https://github.com/BrinsilElias/starter-template/issues">Report Bug</a>
         ·
