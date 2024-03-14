@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">
+    <a href="https://github.com/BrinsilElias/starter-template">
         <img src="./src/assets/images/starter-template-ico.png" alt="Logo" width="80" height="80">
     </a>
     <h3 align="center">Starter Template</h3>
@@ -10,9 +10,9 @@
         <br />
         <a href="#">View Demo</a>
         ·
-        <a href="#">Report Bug</a>
+        <a href="https://github.com/BrinsilElias/starter-template/issues">Report Bug</a>
         ·
-        <a href="#">Request Feature</a>
+        <a href="https://github.com/BrinsilElias/starter-template/issues">Request Feature</a>
     </p>
 </div>
 
@@ -30,7 +30,7 @@
             <a href="#getting-started">Getting Started</a>
             <ul>
                 <li><a href="#prerequisites">Prerequisites</a></li>
-                <li><a href="#installation">Installation</a></li>
+                <li><a href="#setup">Installation</a></li>
             </ul>
         </li>
         <li><a href="#usage">Usage</a></li>
@@ -44,6 +44,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+![Screenshot of Application](./src/assets/images/Starter%20Template.jpeg)
 
 This template provides a powerful foundation for swiftly building slick, single-page web applications using modern development tools and technologies. Streamline your workflow and focus on core functionality and let the template handle the other stuff.
 
@@ -68,7 +70,7 @@ This template provides a powerful foundation for swiftly building slick, single-
 
 ### Prerequisites
 
-Node.js: Please ensure you have Node.js installed on your machine, version 18 or greater. You can download it from the official website [NodeJs](https://nodejs.org/).
+Please ensure you have Node.js installed on your machine, version 18 or greater. You can download it from the official website [NodeJs](https://nodejs.org/).
 
 ### Setup
 
@@ -108,6 +110,8 @@ To get the most out of this template, follow these guidelines:
 * `styles/utilities/`: Place your reusable utility classes in this folder.
 * `src/index.js`: All public JavaScript functions should be called in this file.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- ROADMAP -->
 ## 🚧 Roadmap
 
@@ -139,6 +143,6 @@ Project Link: [https://github.com/BrinsilElias/starter-template](https://github.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
+* [open-props](https://open-props.style)
+* [Adam Argyle](https://github.com/argyleink)
+* [Andy Bell](https://github.com/Andy-set-studio)
