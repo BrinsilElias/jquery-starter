@@ -1,6 +1,6 @@
 {
   "name": "starter-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starter template for helping you build single page applications using jquery and sass",
   "main": "index.js",
   "scripts": {
