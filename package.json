@@ -1,13 +1,13 @@
 {
   "name": "starter-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starter template for helping you build single page applications using jquery and sass",
   "main": "index.js",
   "scripts": {
     "lint:css": "stylelint --formatter --config .stylelintrc.json \"**/*.scss\"",
     "lint:js": "eslint --config .eslintrc.json src/**/*.js",
     "lint": "npm run lint:css && npm run lint:js",
-    "start": "webpack serve  --config webpack.config.dev.js",
+    "start": "webpack-dev-server  --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
     "prepare": "husky"
   },
