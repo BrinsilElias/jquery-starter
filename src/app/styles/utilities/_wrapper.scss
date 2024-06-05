@@ -3,12 +3,12 @@ WRAPPER UTILITY
 A common wrapper/container
 */
 .wrapper {
-    --_max-width: 80rem;
-    --_min-width: 20rem;
-    --_inline-padding: 1.5rem;
-    --_ideal-width: calc(100% - (2 * var(--_inline-padding, 1rem)));
+  --_max-width: 80rem;
+  --_min-width: 20rem;
+  --_inline-padding: 1.5rem;
+  --_ideal-width: calc(100% - (2 * var(--_inline-padding, 1rem)));
 
-    margin-inline: auto;
-    width: clamp(var(--_min-width, 16rem), var(--_ideal-width, 95vw), var(--_max-width, 85rem));
-    position: relative;
+  margin-inline: auto;
+  width: clamp(var(--_min-width, 16rem), var(--_ideal-width, 95vw), var(--_max-width, 85rem));
+  position: relative;
 }

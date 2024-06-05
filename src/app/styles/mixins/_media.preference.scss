@@ -1,19 +1,19 @@
 @mixin color-scheme($mode: light, $root: false) {
-    @if $root == true {
-        @media (prefers-color-scheme: $mode) {
-            :root {
-                @content;
-            }
-        }
-    } @else {
-        @media (prefers-color-scheme: $mode) {
-            @content;
-        }
+  @if $root == true {
+    @media (prefers-color-scheme: $mode) {
+      :root {
+        @content;
+      }
     }
+  } @else {
+    @media (prefers-color-scheme: $mode) {
+      @content;
+    }
+  }
 }
 
 @mixin reduce-motion($name) {
-    @media (prefers-reduced-motion: #{$name}) {
-        @content;
-    }
+  @media (prefers-reduced-motion: #{$name}) {
+    @content;
+  }
 }

@@ -3,172 +3,178 @@
 
 /* --- Custom Brand theme --- */
 @include color-scheme($os-light) {
-    :where(html) {
-        @each $property, $value in $light-theme {
-            --#{$property}: #{$value};
-        }
+  :where(html) {
+    @each $property, $value in $light-theme {
+      --#{$property}: #{$value};
     }
+  }
 }
 
 @include color-scheme($os-dark) {
-    :where(html) {
-        @each $property, $value in $dark-theme {
-            --#{$property}: #{$value};
-        }
+  :where(html) {
+    @each $property, $value in $dark-theme {
+      --#{$property}: #{$value};
     }
+  }
 }
 
 :where([data-theme='light'], .light, .light-theme) {
-    @each $property, $value in $light-theme {
-        --#{$property}: #{$value};
-    }
+  @each $property, $value in $light-theme {
+    --#{$property}: #{$value};
+  }
 }
 
 :where([data-theme='dark'], .dark, .dark-theme) {
-    @each $property, $value in $dark-theme {
-        --#{$property}: #{$value};
-    }
+  @each $property, $value in $dark-theme {
+    --#{$property}: #{$value};
+  }
 }
 
 /* --- Custom Styles ---- */
 body {
-    font-family: Satoshi, $font-sans;
-    display: grid;
-    grid-template-rows: [row-1-start] min-content [row-1-end row-2-start] auto [row-2-end];
-    grid-template-columns:
-        [col-1-start] calc(100% / 12)
-        [col-1-end col-2-start] auto
-        [col-2-end col-3-start] calc(100% / 12)
-        [col-3-end];
-    font-weight: $font-weight-5;
+  font-family: Satoshi, $font-sans;
+  display: grid;
+  grid-template-rows: [row-1-start] min-content [row-1-end row-2-start] auto [row-2-end];
+  grid-template-columns:
+    [col-1-start] calc(100% / 12)
+    [col-1-end col-2-start] auto
+    [col-2-end col-3-start] calc(100% / 12)
+    [col-3-end];
+  font-weight: $font-weight-5;
 }
 
 nav {
-    display: flex;
-    grid-row: row-1-start / row-1-end;
-    grid-column: col-2-start / col-2-end;
-    justify-content: flex-end;
+  display: flex;
+  grid-row: row-1-start / row-1-end;
+  grid-column: col-2-start / col-2-end;
+  justify-content: flex-end;
 
-    button {
-        margin-top: 1.5rem;
-        aspect-ratio: 1;
-        padding: 0.3rem;
-        border-radius: 0.3rem;
-        background-color: var(--app-clr-btn-background);
-        border: var(--app-clr-btn-border) 1px solid;
+  button {
+    margin-top: 1.5rem;
+    aspect-ratio: 1;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: var(--app-clr-btn-background);
+    border: var(--app-clr-btn-border) 1px solid;
 
-        &.theme-toggle {
-            svg { display: none; }
-        }
-
-        &:where([aria-label='light']) {
-            svg.light.moon-icon { display: block; }
-        }
-
-        &:where([aria-label='dark']) {
-            svg.dark.sun-icon { display: block; }
-        }
+    &.theme-toggle {
+      svg {
+        display: none;
+      }
     }
+
+    &:where([aria-label='light']) {
+      svg.light.moon-icon {
+        display: block;
+      }
+    }
+
+    &:where([aria-label='dark']) {
+      svg.dark.sun-icon {
+        display: block;
+      }
+    }
+  }
 }
 
 main {
-    width: min(500px, 100% - 1.5rem);
+  width: min(500px, 100% - 1.5rem);
+  margin-inline: auto;
+  align-self: center;
+  grid-row: row-2-start / row-2-end;
+  grid-column: col-2-start / col-2-end;
+
+  .emoji,
+  img {
+    height: calc(var(--_scale) * 1.2em);
     margin-inline: auto;
-    align-self: center;
-    grid-row: row-2-start / row-2-end;
-    grid-column: col-2-start / col-2-end;
+  }
 
-    .emoji,
-    img {
-        height: calc(var(--_scale) * 1.2em);
-        margin-inline: auto;
+  .icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    place-items: center;
+    margin-inline: auto;
+    margin-block: $size-3;
+    gap: 1.6rem;
+  }
+
+  .text-container {
+    text-align: center;
+    margin-block: $size-7;
+
+    p {
+      font-size: $font-size-3;
     }
 
-    .icon-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: fit-content;
-        place-items: center;
-        margin-inline: auto;
-        margin-block: $size-3;
-        gap: 1.6rem;
+    img.emoji {
+      margin-bottom: $size-3;
+    }
+  }
+
+  .terminal {
+    gap: 0;
+    justify-items: stretch;
+    border: var(--app-clr-tr-border) 1px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    &-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-block: $size-1;
+      background: var(--app-clr-tr-header);
+      color: var(--app-clr-tr-text);
+
+      &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        left: $size-3;
+        width: $size-7;
+        height: $size-2;
+        line-height: 0;
+        background-color: var(--app-clr-tr-threedots);
+        opacity: 0.75;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 16' preserveAspectRatio='xMidYMid meet'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3Ccircle cx='30' cy='8' r='8'/%3E%3Ccircle cx='52' cy='8' r='8'/%3E%3C/svg%3E");
+        mask-repeat: no-repeat;
+      }
+
+      .title::before {
+        content: '\a0';
+      }
     }
 
-    .text-container {
-        text-align: center;
-        margin-block: $size-7;
+    pre {
+      max-width: initial;
+      background-color: var(--app-clr-tr-background);
 
-        p {
-            font-size: $font-size-3;
-        }
+      code {
+        display: block;
+        flex: 1 0 100%;
+        padding: 0.75rem 0;
+        color: var(--app-clr-tr-text);
+        font-size: 0.875rem;
+        font-weight: $font-weight-4;
+        line-height: $font-lineheight-4;
+      }
 
-        img.emoji {
-            margin-bottom: $size-3;
-        }
+      code .tr-line {
+        padding-inline: $size-3;
+        padding-inline-end: $size-8;
+        direction: ltr;
+        unicode-bidi: isolate;
+      }
+
+      code .tr-line :where(span[style^='--']:not([class])) {
+        color: var(--_fclr, inherit);
+        font-style: var(--_fs, inherit);
+        font-weight: var(--_fw, inherit);
+        text-decoration: var(--_td, inherit);
+      }
     }
-
-    .terminal {
-        gap: 0;
-        justify-items: stretch;
-        border: var(--app-clr-tr-border) 1px solid;
-        border-radius: 0.5rem;
-        overflow: hidden;
-
-        &-header {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-block: $size-1;
-            background: var(--app-clr-tr-header);
-            color: var(--app-clr-tr-text);
-
-            &::before {
-                content: '';
-                position: absolute;
-                pointer-events: none;
-                left: $size-3;
-                width: $size-7;
-                height: $size-2;
-                line-height: 0;
-                background-color: var(--app-clr-tr-threedots);
-                opacity: 0.75;
-                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 16' preserveAspectRatio='xMidYMid meet'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3Ccircle cx='30' cy='8' r='8'/%3E%3Ccircle cx='52' cy='8' r='8'/%3E%3C/svg%3E");
-                mask-repeat: no-repeat;
-            }
-
-            .title::before {
-                content: '\a0';
-            }
-        }
-
-        pre {
-            max-width: initial;
-            background-color: var(--app-clr-tr-background);
-
-            code {
-                display: block;
-                flex: 1 0 100%;
-                padding: 0.75rem 0;
-                color: var(--app-clr-tr-text);
-                font-size: 0.875rem;
-                font-weight: $font-weight-4;
-                line-height: $font-lineheight-4;
-            }
-
-            code .tr-line {
-                padding-inline: $size-3;
-                padding-inline-end: $size-8;
-                direction: ltr;
-                unicode-bidi: isolate;
-            }
-
-            code .tr-line :where(span[style^='--']:not([class])) {
-                color: var(--_fclr, inherit);
-                font-style: var(--_fs, inherit);
-                font-weight: var(--_fw, inherit);
-                text-decoration: var(--_td, inherit);
-            }
-        }
-    }
+  }
 }

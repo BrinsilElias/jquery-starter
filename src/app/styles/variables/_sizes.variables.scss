@@ -2,64 +2,64 @@
 
 // Size Map
 $sizes: (
-    1: 0.25rem,
-    2: 0.5rem,
-    3: 1rem,
-    4: 1.25rem,
-    5: 1.5rem,
-    6: 1.75rem,
-    7: 2rem,
-    8: 3rem,
-    9: 4rem,
-    10: 5rem
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.25rem,
+  5: 1.5rem,
+  6: 1.75rem,
+  7: 2rem,
+  8: 3rem,
+  9: 4rem,
+  10: 5rem
 );
 
 // Fluid Size Map
 $fluid-sizes: (
-    1: clamp(0.5rem, 1vw, 1rem),
-    2: clamp(1rem, 2vw, 1.5rem),
-    3: clamp(1.5rem, 3vw, 2rem),
-    4: clamp(2rem, 4vw, 3rem),
-    5: clamp(4rem, 5vw, 5rem)
+  1: clamp(0.5rem, 1vw, 1rem),
+  2: clamp(1rem, 2vw, 1.5rem),
+  3: clamp(1.5rem, 3vw, 2rem),
+  4: clamp(2rem, 4vw, 3rem),
+  5: clamp(4rem, 5vw, 5rem)
 );
 
 // Content Size Map
 $content-sizes: (
-    1: 20ch,
-    2: 45ch,
-    3: 60ch
+  1: 20ch,
+  2: 45ch,
+  3: 60ch
 );
 
 // Header Size Map
 $header-sizes: (
-    1: 20ch,
-    2: 25ch,
-    3: 35ch
+  1: 20ch,
+  2: 25ch,
+  3: 35ch
 );
 
 // Breakpoints Map
 $breakpoints: (
-    xxs: 240px,
-    xs: 360px,
-    sm: 480px,
-    md: 768px,
-    lg: 1024px,
-    xl: 1440px,
-    xxl: 1920px
+  xxs: 240px,
+  xs: 360px,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+  xxl: 1920px
 );
 
 // Relative Size Map
 $relative-sizes: (
-    1: 0.25ch,
-    2: 0.5ch,
-    3: 1ch,
-    4: 1.25ch,
-    5: 1.5ch,
-    6: 1.75ch,
-    7: 2ch,
-    8: 3ch,
-    9: 4ch,
-    10: 5ch
+  1: 0.25ch,
+  2: 0.5ch,
+  3: 1ch,
+  4: 1.25ch,
+  5: 1.5ch,
+  6: 1.75ch,
+  7: 2ch,
+  8: 3ch,
+  9: 4ch,
+  10: 5ch
 );
 
 // Define: Sizes
