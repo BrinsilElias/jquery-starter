@@ -5,5 +5,5 @@ const run = require('./app/scripts/utilities/run');
 const app = require('./app/scripts/app');
 
 $(() => {
-    run(app);
+  run(app);
 });

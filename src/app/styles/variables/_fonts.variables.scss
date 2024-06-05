@@ -7,51 +7,51 @@ $font-mono: ui-monospace, monospace;
 
 // Font Weight
 $font-weights: (
-    1: 100,
-    2: 200,
-    3: 300,
-    4: 400,
-    5: 500,
-    6: 600,
-    7: 700,
-    8: 800,
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700,
+  8: 800
 );
 
 // Line Height
 $font-lineheights: (
-    1: 1.25,
-    2: 1.375,
-    3: 1.5,
-    4: 1.75,
-    5: 2,
+  1: 1.25,
+  2: 1.375,
+  3: 1.5,
+  4: 1.75,
+  5: 2
 );
 
 // Letter Spacing
 $font-letterspacings: (
-    0: -0.05em,
-    1: 0.025em,
-    2: 0.05em,
-    3: 0.075em,
+  0: -0.05em,
+  1: 0.025em,
+  2: 0.05em,
+  3: 0.075em
 );
 
 // Font Size
 $font-sizes: (
-    1: 1rem,
-    2: 1.1rem,
-    3: 1.25rem,
-    4: 1.5rem,
-    5: 2rem,
-    6: 2.5rem,
-    7: 3rem,
-    8: 3.5rem,
+  1: 1rem,
+  2: 1.1rem,
+  3: 1.25rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 2.5rem,
+  7: 3rem,
+  8: 3.5rem
 );
 
 // Font Size Fluid
 $font-size-fluids: (
-    0: clamp(0.75rem, 2vw, 1rem),
-    1: clamp(1rem, 4vw, 1.5rem),
-    2: clamp(1.5rem, 6vw, 2.5rem),
-    3: clamp(2rem, 9vw, 3.5rem),
+  0: clamp(0.75rem, 2vw, 1rem),
+  1: clamp(1rem, 4vw, 1.5rem),
+  2: clamp(1.5rem, 6vw, 2.5rem),
+  3: clamp(2rem, 9vw, 3.5rem)
 );
 
 // Define: Font Weights
@@ -93,14 +93,10 @@ $font-size-fluid-1: map.get($font-size-fluids, 1);
 $font-size-fluid-2: map.get($font-size-fluids, 2);
 $font-size-fluid-3: map.get($font-size-fluids, 3);
 
-
 @mixin generate-variables($prefix, $values) {
-    @each $key, $value in $values {
-        $variable-name: #{$prefix}-#{$key};
+  @each $key, $value in $values {
+    $variable-name: #{$prefix}-#{$key};
 
-        #{$variable-name}: map.get($values, $key);
-    }
+    #{$variable-name}: map.get($values, $key);
+  }
 }
-
-
-

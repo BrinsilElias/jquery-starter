@@ -45,7 +45,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot of Application](./src/assets/images/Starter%20Template.jpeg)
+![Screenshot of Application](./src/assets/images/Starter%20Template.png)
 
 This template provides a powerful foundation for swiftly building slick, single-page web applications using modern development tools and technologies. Streamline your workflow and focus on core functionality and let the template handle the other stuff.
 
