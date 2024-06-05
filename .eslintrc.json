@@ -4,11 +4,11 @@
     "jquery": true,
     "browser": true
   },
-  "extends": "airbnb-base",
+  "extends": ["airbnb-base", "eslint-config-prettier"],
   "rules": {
     "indent": [
       "error",
-      4,
+      2,
       {
         "SwitchCase": 1,
         "VariableDeclarator": 1
