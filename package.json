@@ -1,0 +1,35 @@
+{
+  "name": "jquery-starter",
+  "version": "1.0.2",
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "format": "prettier --write .",
+    "lint:js": "eslint 'src/**/*.js'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint": "npm run lint:js && npm run lint:css lint-staged",
+    "preview": "rsbuild preview",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@rsbuild/core": "1.0.1-rc.5",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
+    "html-loader": "^5.1.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "lint-staged": {
+    "*.{js,css,json}": [
+      "prettier --write"
+    ]
+  }
+}
