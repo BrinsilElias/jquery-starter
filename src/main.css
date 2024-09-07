@@ -1,0 +1,13 @@
+/* --- Global --- */
+@import url('@app/styles/global/variables.css');
+@import url('@app/styles/global/normalize.css');
+@import url('@app/styles/global/fonts.css');
+
+/* --- Utilities --- */
+@import url('@app/styles/utilities/flow.css');
+@import url('@app/styles/utilities/region.css');
+@import url('@app/styles/utilities/visually-hidden.css');
+@import url('@app/styles/utilities/wrapper.css');
+
+/* --- Custom Styles --- */
+@import url('@app/styles/index.css');

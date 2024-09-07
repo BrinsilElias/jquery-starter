@@ -1,0 +1,71 @@
+:where(html) {
+  /* --- Font Family --- */
+  --font-sans: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
+    noto sans, sans-serif;
+  --font-serif: ui-serif, serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* --- Font Weight --- */
+  --font-weight-1: 100;
+  --font-weight-2: 200;
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+  --font-weight-8: 800;
+
+  /* --- Font Size --- */
+  --font-size-1: 0.875rem;
+  --font-size-2: 1rem;
+  --font-size-3: 1.125rem;
+  --font-size-4: 1.25rem;
+  --font-size-5: 1.375rem;
+  --font-size-6: 1.5rem;
+  --font-size-7: 1.625rem;
+  --font-size-8: 1.75rem;
+  --font-size-9: 1.875rem;
+
+  /* --- Font Line Height --- */
+  --font-line-height-1: 1.25;
+  --font-line-height-2: 1.375;
+  --font-line-height-3: 1.5;
+  --font-line-height-4: 1.75;
+  --font-line-height-5: 2;
+
+  /* --- Font Letter Spacing --- */
+  --font-letter-spacing-1: -0.05em;
+  --font-letter-spacing-2: 0.025em;
+  --font-letter-spacing-3: 0.05em;
+  --font-letter-spacing-4: 0.075em;
+
+  /* --- Font Size Fluid --- */
+  --font-size-fluid-0: clamp(0.75rem, 2vw, 1rem);
+  --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+  --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+  --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+
+  /* --- Font Size Responsive --- */
+  --size-1: 0.25em;
+  --size-2: 0.5em;
+  --size-3: 0.75em;
+  --size-4: 1em;
+  --size-5: 1.25em;
+  --size-6: 1.5em;
+  --size-7: 1.75em;
+  --size-8: 2em;
+
+  /* --- App Color --- */
+  --app-clr-background: hsl(228deg 9% 10%);
+  --app-clr-text: hsl(210deg 17% 98%);
+  --app-clr-text-muted: hsl(207deg 5% 55%);
+  --app-clr-link: hsl(228deg 100% 78%);
+  --app-clr-link-visited: hsl(289deg 85% 78%);
+  --app-clr-btn: hsl(220deg 9% 6%);
+  --app-clr-btn-border: hsl(228deg 9% 22%);
+  --app-clr-tr-background: hsl(224deg 15% 15%);
+  --app-clr-tr-border: hsl(229deg 13% 25%);
+  --app-clr-tr-header: hsl(220deg 9% 6%);
+  --app-clr-tr-text: hsl(223deg 6% 77%);
+  --app-clr-tr-threedots: hsl(228deg 4% 77% / 57.3%);
+}
