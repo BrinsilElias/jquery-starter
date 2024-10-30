@@ -16,8 +16,8 @@ importers:
         specifier: ^9.9.0
         version: 9.13.0
       '@rsbuild/core':
-        specifier: 1.0.18
-        version: 1.0.18
+        specifier: 1.0.19
+        version: 1.0.19
       eslint:
         specifier: ^9.9.0
         version: 9.13.0
@@ -174,8 +174,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@rsbuild/core@1.0.18':
-    resolution: {integrity: sha512-NRdcGCAuBpzAIIdv+gVZxpgd9Cu9JSbaOC13nTbWRKXrHPpr+1iwYFBbM01KtX0Fe2TBLgmSaJfdDJAfEeZ3Dg==}
+  '@rsbuild/core@1.0.19':
+    resolution: {integrity: sha512-63DAPvYfRBoUrb51BUPb4Xoqx48MHQ0yLcmnCiqZGpMeKYtTWzD+lyx5va4cr9qvdnIFTAX2BMuYC/j5iSrtTA==}
     engines: {node: '>=16.7.0'}
     hasBin: true
 
@@ -392,9 +392,6 @@ packages:
 
   camel-case@4.1.2:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
-
-  caniuse-lite@1.0.30001658:
-    resolution: {integrity: sha512-N2YVqWbJELVdrnsW5p+apoQyYt51aBMSsBZki1XZEfeBCexcM/sf4xiAHcXQBkuOwJBXtWF7aW1sYX6tKebPHw==}
 
   caniuse-lite@1.0.30001674:
     resolution: {integrity: sha512-jOsKlZVRnzfhLojb+Ykb+gyUSp9Xb57So+fAiFlLzzTKpqg8xxSav0e40c8/4F/v9N8QSvrRRaLeVzQbLqomYw==}
@@ -1412,7 +1409,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@rsbuild/core@1.0.18':
+  '@rsbuild/core@1.0.19':
     dependencies:
       '@rspack/core': 1.0.14(@swc/helpers@0.5.13)
       '@rspack/lite-tapable': 1.0.1
@@ -1465,7 +1462,7 @@ snapshots:
       '@module-federation/runtime-tools': 0.5.1
       '@rspack/binding': 1.0.14
       '@rspack/lite-tapable': 1.0.1
-      caniuse-lite: 1.0.30001658
+      caniuse-lite: 1.0.30001674
     optionalDependencies:
       '@swc/helpers': 0.5.13
 
@@ -1641,8 +1638,6 @@ snapshots:
     dependencies:
       pascal-case: 3.1.2
       tslib: 2.7.0
-
-  caniuse-lite@1.0.30001658: {}
 
   caniuse-lite@1.0.30001674: {}
 
