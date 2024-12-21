@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
-    "@rsbuild/core": "1.1.10",
+    "@rsbuild/core": "1.1.11",
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
     "html-loader": "^5.1.0",
